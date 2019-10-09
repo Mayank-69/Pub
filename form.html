@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+        
+<style>
+        form{
+        
+        width: 75%;
+        margin-left: 30px;
+        padding: 100px;
+        padding-bottom: 20px;
+        padding-top: 0px;
+        padding-left: 200px;
+    }
+ 
+h4{
+    font-style:italic;
+    
+}
+input[type=submit] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+    border-radius: 20px;
+}
+    input[type=submit]:hover{
+        background-color: darkcyan;
+    }
+input[type=text] {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+}
+    table{
+        display: inline-table;
+    }
+    table,tr{
+        width: 100%;
+    }
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+textarea {
+  font-style:Verdana;
+  width: 75%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+}
+textarea[type=text]:focus {
+  border: 3px solid #555;
+}
+    .For{
+        padding: 100px;
+        padding-bottom: 50px;
+        padding-top: 0;
+    }
+    
+    .Choice{
+        margin-right: 20px;
+        margin-bottom: 30px;
+        display: inline-block;
+        margin-top: 30px;
+      
+    }
+    .name{
+        display: inline;
+        
+    }
+    .X{
+        width: 100px;
+    }
+    td{
+        margin-left: 150px;
+    }
+</style><script>function validate(){
+                var first = document.getElementById("First");
+                var last = document.getElementById("Last");
+                var email=document.getElementById("Email");
+                var phone = document.getElementById("Phone");
+                var gender=document.getElementsByName("gen");
+                var i=0;
+                var x = document.forms["myForm"]["Email"].value;
+                var atpos = x.indexOf("@");
+                var dotpos = x.lastIndexOf(".");  
+                
+                if(first.value.trim()==""){
+                    alert("Enter First Name");
+                    return false;
+                }
+                else if(!isNaN(first.value)){
+                    alert("First Name cannot contain numbers");
+                    return false;
+                }
+                if(last.value.trim()==""){
+                    alert("Enter Last Name");
+                    return false;
+                }
+                 else if(!isNaN(last.value)){
+                    alert("Last Name cannot contain numbers");
+                    return false;
+                }
+                if(email.value.trim()==""){
+                    alert("Enter Email ID ");
+                    return false;
+                }
+                else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+                    alert("Not a valid e-mail address");
+                    return false;
+                }
+                if(phone.value.trim()==""){
+                        alert("Enter Phone Number");
+                        return false;
+                    }
+                else if(isNaN(phone.value)){
+                    alert("Enter Valid Number!!");
+                    return false;
+                }
+                else if(phone.value.length!=10){
+                    alert("Number isn't 10 digit !!");
+                    return false;
+                }
+                if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false){
+                    alert("Gender Not Selected");
+                    return false;
+                }
+                else{
+                    alert("Form Submitted yay!!");
+                    return true;
+                }
+                
+            }
+        </script>
+    </head>
+<body background="back.jpg">
+    
+            <div class="For">
+               <center>
+                  <h2>
+                        BECOME A MEMBER
+                  </h2> 
+               </center> 
+                    <form action="" method ="post" onsubmit="return validate()" name="myForm">
+                 <table>
+                     <tr>
+                         <td class="X">
+                             <h4>First Name :</h4>
+                         </td>
+                         
+                         <td>
+                             <input type ="text" placeholder="Enter first name" class="name" id="First" />
+                
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="X">
+                             <h4>Last Name : 
+                        </h4>
+                
+                         </td>
+                         <td>
+                             <input type ="text" placeholder="Enter last name" class="name" id="Last" />
+                
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="X">
+                             <h4>Email id:</h4>    
+                         </td>
+                         <td>
+                             <input type ="text" placeholder="Enter email id" name="email id" id="Email"/>
+                
+                         </td>
+                         
+                     </tr>
+                     <tr>
+                         <td class="X">
+                             <h4>Phone no.:</h4>
+                         </td>
+                         <td>
+                         <input type ="text" placeholder="Enter phone number" name="phone no." maxlength="10" id="Phone" />
+                            </td>
+                     </tr>
+                     <tr>
+                         <td class="X">
+                             <h4>Gender:</h4>
+                         </td>
+                         <td>
+                             <div class="Choice">
+                            <input type ="radio" name="gen" value ="on" id="Gender" />Male 
+                     </div>
+                     <div class="Choice">
+                            <input type ="radio" name="gen" value ="on" id="Gender" />Female
+                         
+                     </div>
+                     <div class="Choice">
+                            <input type ="radio" name="gen" value ="on" id="Gender"/>Other
+                         
+                     </div>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <h4 class="X">What Makes You Decide to Join us: </h4>
+                
+                         </td>
+                         <td>
+                                     
+                            <textarea type ="text" placeholder="Drop a message" name=" description" rows ="3" cols="50">
+                            </textarea>
+                         </td>
+                     </tr>
+                     </table>   
+                <br><br>
+                
+                    <input type ="submit" value="Submit" style="margin-left: 700px"/>
+                    
+                
+                </form>
+</div>
+</body>
+</html>
