@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>New Project</title>
+  
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+<link href="css32/style2.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-storage.js"></script>
+
+
+<style>
+.K{
+       width: 150px; align-self: center; margin-left: 1100px;height: 30px;border-radius: 50px;background-color: #1A2A47;color: white 
+}
+.K:hover{
+        background-color: #00B28F;
+}
+</style>
+
+
+</head>
+
+<body id="page-top">
+  
+  <div id="wrapper">
+    
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+          <br>
+            <img class="navbar-brand mr-1" src="img7/WhatsApp Image 2019-06-10 at 1.09.26 PM.jpeg" alt="" style="height: 70px; width:70px; border-radius:50px;">
+            <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+        <a class="nav-link" href="index.html">
+          
+          <span>Log Out</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        
+          <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+      <a class="nav-link" href="view_profile1.html">
+        
+        <span>My Profile</span>
+      </a>
+    </li>
+    <li class="nav-item active">
+        
+      <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+  <a class="nav-link" href="RecentProj.html">
+    
+    <span>Recent Projects</span>
+  </a>
+</li>
+
+      </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Upload Your Project</a>
+          </li>
+          <li class="breadcrumb-item active">Upload given files</li>
+        </ol>
+
+        <center>
+      <table border="1px">
+    <tr>
+        <th>
+         SNo
+     </th>
+     <th>
+         Project Item Required
+     </th>
+     <th>
+         Add
+     </th>
+
+    </tr>
+     <tr>
+         <td>
+            <center>
+                1.
+            </center>
+             
+         </td>
+         <td>
+            <div class="hea">
+                 Report of your project  
+             </div>
+             
+         </td>
+         <td>
+           <center>
+                <input type="file"id="report" placeholder="Enter google drive link">
+                <progress value="0" max="100" id="uploader1">0%</progress>
+
+           </center>
+                
+         </td>
+
+              </tr>
+      <tr>
+         <td>
+            <center>
+                2.
+            </center>
+            <td>
+            <div class="hea">
+                 Presentation   
+             </div>
+             
+         </td>
+         <td>
+            <center>
+                    <input type="file"id="presentation" placeholder="Enter google drive link">
+                    <progress value="0" max="100" id="uploader2">0%</progress>
+
+        
+           </center>
+         </td>
+
+             
+              </tr>
+              <tr>
+         <td>
+            <center>
+                3.
+            </center>
+            <td>
+            <div class="hea">
+                 Link to working of video   
+             </div>
+             
+         </td>
+         <td>
+            <center>
+                    <input type="file" id="video" placeholder="Enter google drive link">
+                    <progress value="0" max="100" id="uploader3">0%</progress>
+
+           </center>
+         </td>
+
+             
+              </tr>
+                <tr>
+         <td>
+            <center>
+                4.
+            </center>
+            <td>
+            <div class="hea">
+                 Github Repository   
+             </div>
+             
+         </td>
+         <td>
+            <center>
+                    <input id="github" placeholder="Enter url of the project">
+
+        
+           </center>
+         </td>
+
+             
+              </tr>
+      <tr>
+
+        <td>
+
+                <center>
+                        5.
+                    </center>  
+                    <td>
+                            <div class="hea">
+                                 Research Paper Link   
+                             </div>
+        </td>
+        <td>
+                <center>
+                 <input type="file" id="research" placeholder="Enter google drive link">
+                 <progress value="0" max="100" id="uploader4">0%</progress>
+
+            
+               </center>
+             </td>
+      </tr>
+      </table>
+
+      </center>
+      <br><br>
+    <div>
+
+
+        
+    </div>
+      <div >
+            <input type="Submit" id="upload" class="K">  
+          </div>
+          
+ 
+ 
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+    
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="js/upload.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+        </div>
+      </div>
+    </div>
+    
+</body>
+
+</html>

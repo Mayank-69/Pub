@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>New Project</title>
+  
+
+  <!-- Custom fonts for this template-->
+  
+          
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+<link href="CSS22/style2.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+ 
+  <style>
+      
+ul{
+    list-style-type: none;
+}
+        .tags-input-wrapper {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            max-width: 400px;
+            border: 1px solid #ccc
+        }
+
+        .tags-input-wrapper input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 150px;
+        }
+
+        .tags-input-wrapper .tag {
+            display: inline-block;
+            background-color: #009432;
+            color: white;
+            border-radius: 40px;
+            padding: 0px 3px 0px 7px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .tags-input-wrapper .tag a {
+            margin: 0 7px 3px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+  
+  <div id="wrapper">
+    
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+          <br>
+            <img class="navbar-brand mr-1" src="img7/WhatsApp Image 2019-06-10 at 1.09.26 PM.jpeg" alt="" style="height: 70px; width:70px; border-radius:50px;">
+            <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+        <a class="nav-link" href="index.html">
+          
+          <span>Log Out</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        
+          <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+      <a class="nav-link" href="view_profile1.html">
+        
+        <span>My Profile</span>
+      </a>
+    </li>
+    <li class="nav-item active">
+        
+      <a class="navbar-brand mr-1" id="albin"  href="index.html"></a>
+  <a class="nav-link" href="RecentProj.html">
+    
+    <span>Recent Projects</span>
+  </a>
+</li>
+
+      </ul>
+     <div id="content-wrapper" >
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Upload Your Project</a>
+          </li>
+          <li class="breadcrumb-item active">Upload given files</li>
+
+        </ol>
+        
+        <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+                <input id="myInput" class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+        </div>
+        <div>
+            
+<div class="container"> 
+    <center >
+            <div class="form-row" id="boo">
+                    <div  class="flex-fill" style="margin-left: 50px;text-align: left"id="generateDiv">
+                      </div>
+                
+                </div>
+            
+    </center>
+        
+</div>
+
+      </div>
+          
+    </div>
+</div>
+   
+<script src="js/recentproj.js"></script>
+
+    <!-- <script src="js/dashboard.js"></script> -->
+    <script>
+     $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#generateDiv div").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+    </script>
+
+    </body>
+</html>
+
+
+    
